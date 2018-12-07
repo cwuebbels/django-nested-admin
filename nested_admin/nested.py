@@ -137,7 +137,7 @@ class NestedModelAdminMixin(object):
             prepopulated = dict(inline.get_prepopulated_fields(request, obj))
 
             if DJANGO_VERSION >= (2, 1):
-                has_add_permission = inline._has_add_permission(request, obj)
+                has_add_permission = inline.has_add_permission(request, obj)
                 has_change_permission = inline.has_change_permission(request, obj)
                 has_delete_permission = inline.has_delete_permission(request, obj)
                 has_view_permission = inline.has_view_permission(request, obj)
